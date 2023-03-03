@@ -9,6 +9,8 @@ function MainLayout() {
       </div>
       <div className="flex-1 order-1 md:order-2">
         <Sidebar />
+
+        <p className="h-[1px] bg-gray-200 sm:hidden"></p>
       </div>
     </div>
   );

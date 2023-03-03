@@ -15,7 +15,7 @@ function page(props: any) {
           <PostDetails {...data} />
           <RecomPosts />
         </div>
-        <div className="hidden md:col-span-4 ">
+        <div className="hidden md:col-span-4 md:block ">
           <SideSection {...data.author} />
         </div>
       </div>

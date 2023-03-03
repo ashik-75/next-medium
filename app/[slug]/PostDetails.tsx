@@ -3,7 +3,9 @@ import { PostType } from "../../data/post.types";
 function PostDetails({ image, title, description }: PostType) {
   return (
     <div className="space-y-5 mt-5">
-      <h1 className="font-extrabold text-2xl md:text-3xl">{title}</h1>
+      <h1 className="font-extrabold text-2xl md:text-3xl text-gray-700">
+        {title}
+      </h1>
       <div className="h-96 rounded-lg my-10 overflow-hidden">
         <img src={image} className="w-full h-full" alt="" />
       </div>

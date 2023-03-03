@@ -9,7 +9,7 @@ function RecomPosts() {
       </h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {posts.map((post) => (
+        {posts.slice(5, 10).map((post) => (
           <RecommenPost {...post} key={post._id} />
         ))}
       </div>

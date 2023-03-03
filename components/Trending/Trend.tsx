@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { PostType } from "../../data/post.types";
 
 type TrendType = {
@@ -25,7 +26,9 @@ function Trend({ index, post }: TrendType) {
           </div>
         </div>
 
-        <div className="font-bold">{post.title}</div>
+        <Link href={`/${post.slug}`}>
+          <div className="font-bold">{post.title}</div>
+        </Link>
         <div className="text-xs text-gray-500 flex space-x-1">
           <span>
             {new Date(post.date).toLocaleDateString("en-US", {
