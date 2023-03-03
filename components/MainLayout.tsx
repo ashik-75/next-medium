@@ -9,7 +9,6 @@ function MainLayout() {
       </div>
       <div className="flex-1 order-1 md:order-2">
         <Sidebar />
-        <hr className="bg-gray-300 h-[.5px]" />
       </div>
     </div>
   );

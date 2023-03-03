@@ -3,7 +3,7 @@ import RecommenPost from "./RecommenPost";
 
 function RecomPosts() {
   return (
-    <div className="space-y-5">
+    <div className="space-y-5 my-20">
       <h1 className="text-xl font-bold text-gray-600">
         More Posts from Medium
       </h1>

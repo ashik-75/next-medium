@@ -1,11 +1,15 @@
 import tags from "../../data/tags";
-import Tag from "./Tag";
 
 function Tags() {
   return (
     <div className="flex flex-wrap gap-2">
       {tags.map((tag) => (
-        <Tag key={tag._id} {...tag} />
+        <div
+          className="w-fit px-3 py-1 text-sm border text-gray-500"
+          key={tag._id}
+        >
+          {tag.title}
+        </div>
       ))}
     </div>
   );

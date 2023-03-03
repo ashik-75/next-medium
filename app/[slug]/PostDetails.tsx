@@ -2,37 +2,35 @@ import { PostType } from "../../data/post.types";
 
 function PostDetails({ image, title, description }: PostType) {
   return (
-    <div className="space-y-5">
-      <div className="">
-        <img src={image} className="w-full h-72 md:h-96 rounded" alt="" />
+    <div className="space-y-5 mt-5">
+      <h1 className="font-extrabold text-2xl md:text-3xl">{title}</h1>
+      <div className="h-96 rounded-lg my-10 overflow-hidden">
+        <img src={image} className="w-full h-full" alt="" />
       </div>
 
-      <div className="space-y-3">
-        <h1 className="font-extrabold text-gray-700 tracking-wide text-xl md:text-4xl">
-          {title}
-        </h1>
-        <p className="text-gray-600">
+      <div className="space-y-3 text-lg text-gray-600">
+        <p>
           {description} Lorem ipsum dolor sit amet consectetur adipisicing elit.
           Adipisci eos vel, hic cumque obcaecati deleniti commodi asperiores
           odio voluptatibus qui! Lorem, ipsum dolor sit amet consectetur
           adipisicing elit. Numquam neque facere explicabo! Quod labore officiis
           beatae dignissimos! Dolor, ea magnam?
         </p>
-        <p className="text-gray-600">
+        <p>
           {description} Lorem ipsum dolor sit amet consectetur adipisicing elit.
           Adipisci eos vel, hic cumque obcaecati deleniti commodi asperiores
           odio voluptatibus qui! Lorem, ipsum dolor sit amet consectetur
           adipisicing elit. Numquam neque facere explicabo! Quod labore officiis
           beatae dignissimos! Dolor, ea magnam?
         </p>
-        <p className="text-gray-600">
+        <p>
           {description} Lorem ipsum dolor sit amet consectetur adipisicing elit.
           Adipisci eos vel, hic cumque obcaecati deleniti commodi asperiores
           odio voluptatibus qui! Lorem, ipsum dolor sit amet consectetur
           adipisicing elit. Numquam neque facere explicabo! Quod labore officiis
           beatae dignissimos! Dolor, ea magnam?
         </p>
-        <p className="text-gray-600">
+        <p>
           {description} Lorem ipsum dolor sit amet consectetur adipisicing elit.
           Adipisci eos vel, hic cumque obcaecati deleniti commodi asperiores
           odio voluptatibus qui! Lorem, ipsum dolor sit amet consectetur

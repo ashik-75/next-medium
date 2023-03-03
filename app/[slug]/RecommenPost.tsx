@@ -5,19 +5,22 @@ function RecommenPost({ image, title, author, slug }: PostType) {
   return (
     <Link href={`/${slug}`}>
       <div className="flex gap-2 w-full items-start">
-        <div className="flex-1">
+        <div className="flex-1 space-y-2">
           <div className="flex gap-3 items-center">
             <div>
               <img
                 src={author.image}
-                className="h-5 w-5 object-cover object-top rounded-full"
+                className="h-7 w-7 object-cover object-top rounded-full"
                 alt=""
               />
             </div>
-            <p className="text-gray-500 capitalize ">{author.name}</p>
+            <p className="text-gray-700 font-medium capitalize text-sm ">
+              {author.name} <span className="text-gray-500">in</span> Towards
+              Data Science
+            </p>
           </div>
 
-          <h1 className="text-lg font-bold text-gray-600">{title}</h1>
+          <h1 className=" font-bold text-lg text-gray-800">{title}</h1>
         </div>
         <div className="h-16 w-20 shrink-0">
           <img

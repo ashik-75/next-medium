@@ -10,28 +10,35 @@ function Post({ title, author, date, description, slug, image }: PostType) {
           <div className="flex items-center gap-x-3">
             <img
               src={author.image}
-              className="w-5 h-5 rounded-full object-cover object-top"
+              className="w-7 h-7 rounded-full object-cover object-top"
               alt=""
             />
-            <span>{author.name}</span>
+            <span className="capitalize font-medium text-sm">
+              {author.name} <span className="text-gray-500">in</span> Towards
+              Data Science
+            </span>
           </div>
-          <h1 className="font-bold text-xl">{title}</h1>
-          <p>{description}</p>
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3 text-sm text-gray-500">
+          <h1 className="font-extrabold text-xl">{title}</h1>
+          <p className="font-medium text-gray-600">{description}</p>
+          <div className="flex items-start max-w-[90%] justify-between">
+            <div className="flex items-center gap-3 text-xs text-gray-500">
               <p>{date}</p>
-              <span className="bg-gray-200 rounded-full px-4  py-1">funny</span>
+              <span className="bg-gray-200 rounded-full px-3 text-xs font-medium  py-1">
+                funny
+              </span>
             </div>
 
             <BookmarkIcon className="icon" />
           </div>
         </div>
         <div className="flex-1">
-          <img
-            src="/cover.jpg"
-            className="h-40 w-full object-cover rounded "
-            alt=""
-          />
+          <div className="h-40 rounded-lg overflow-hidden">
+            <img
+              src={image}
+              className="h-full w-full hover:scale-110 transition-all "
+              alt=""
+            />
+          </div>
         </div>
       </div>
     </Link>
