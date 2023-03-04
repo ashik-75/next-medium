@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { BsFacebook, BsLinkedin, BsTwitter } from "react-icons/bs";
 import { MdOutlineBookmarkAdd } from "react-icons/md";
 import { AuthorType } from "../../data/post.types";
@@ -8,8 +9,13 @@ type AuthType = AuthorType & {
 function Author({ image, name, date }: AuthType) {
   return (
     <div className="flex gap-x-4 max-w-2xl">
-      <div className="shrink-0">
-        <img src={image} className="h-10 w-10 rounded-full" alt="" />
+      <div className="shrink-0 h-10 w-10 relative rounded-full overflow-hidden ">
+        <Image
+          src={image}
+          className="object-cover object-top"
+          fill
+          alt="author image"
+        />
       </div>
 
       <div className="flex-1">

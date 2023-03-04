@@ -40,7 +40,7 @@ const posts: PostType[] = [
       "This war is prolong to 2 years now, it is happening for power crisis.",
     slug: "show-something",
     image:
-      "https://plus.unsplash.com/premium_photo-1663013582031-2721882c257b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0M3x8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60",
+      "https://plus.unsplash.com/premium_photo-1663013582031-2721882c257b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0M3x8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=60",
     author: {
       _id: 7,
       name: "alex jones",

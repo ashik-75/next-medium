@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { PostType } from "../../data/post.types";
 
 function PostDetails({ image, title, description }: PostType) {
@@ -6,8 +7,8 @@ function PostDetails({ image, title, description }: PostType) {
       <h1 className="font-extrabold text-2xl md:text-3xl text-gray-700">
         {title}
       </h1>
-      <div className="h-96 rounded-lg my-10 overflow-hidden">
-        <img src={image} className="w-full h-full" alt="" />
+      <div className="h-96 rounded my-10 overflow-hidden relative">
+        <Image src={image} fill alt="detailed image" className="object-cover" />
       </div>
 
       <div className="space-y-3 text-lg text-gray-600">

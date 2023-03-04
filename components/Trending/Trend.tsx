@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { PostType } from "../../data/post.types";
 
@@ -14,11 +15,12 @@ function Trend({ index, post }: TrendType) {
       }`}</h1>
       <div className="space-y-2 pt-1">
         <div className="flex items-center gap-3">
-          <div className="w-7 h-7">
-            <img
+          <div className="w-7 h-7 relative rounded-full overflow-hidden">
+            <Image
               src={post.author.image}
-              className="w-full h-full object-cover object-top rounded-full"
-              alt=""
+              className=" object-cover object-top "
+              alt="author image"
+              fill
             />
           </div>
           <div className="capitalize font-semibold text-sm text-gray-800">

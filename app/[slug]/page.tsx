@@ -6,7 +6,7 @@ import RecomPosts from "./RecomPosts";
 import SideSection from "./SideSection";
 
 function page(props: any) {
-  const data: PostType = posts[0];
+  const data: PostType = posts[2];
   return (
     <div>
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-5 p-5">

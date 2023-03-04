@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { AuthorType } from "../../data/post.types";
 import posts from "../../data/posts";
 import RecommenPost from "./RecommenPost";
@@ -11,11 +12,12 @@ function SideSection({
     <div>
       {/* author part */}
       <div className="space-y-3 mb-10">
-        <div>
-          <img
+        <div className="relative w-20 h-20 rounded-full overflow-hidden">
+          <Image
             src={image}
-            alt=""
-            className="w-20 h-20 rounded-full object-cover object-top"
+            alt="author"
+            fill
+            className=" object-cover object-top"
           />
         </div>
 

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { PostType } from "../../data/post.types";
 
@@ -7,11 +8,12 @@ function RecommenPost({ image, title, author, slug }: PostType) {
       <div className="flex gap-2 w-full items-start">
         <div className="flex-1 space-y-2">
           <div className="flex gap-3 items-center">
-            <div>
-              <img
+            <div className="relative rounded-full overflow-hidden w-7 h-7">
+              <Image
                 src={author.image}
-                className="h-7 w-7 object-cover object-top rounded-full"
-                alt=""
+                className="object-cover object-top"
+                fill
+                alt="author"
               />
             </div>
             <p className="text-gray-700 font-medium capitalize text-sm ">
@@ -22,11 +24,12 @@ function RecommenPost({ image, title, author, slug }: PostType) {
 
           <h1 className=" font-bold text-lg text-gray-800">{title}</h1>
         </div>
-        <div className="h-16 w-20 shrink-0">
-          <img
+        <div className="h-16 w-20 shrink-0 relative rounded overflow-hidden">
+          <Image
             src={image}
-            className=" w-full h-full rounded object-cover object-top"
-            alt=""
+            fill
+            className="hover:scale-110 transition-all"
+            alt="posts image"
           />
         </div>
       </div>

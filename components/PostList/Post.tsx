@@ -1,4 +1,5 @@
 import { BookmarkIcon } from "@heroicons/react/24/outline";
+import Image from "next/image";
 import Link from "next/link";
 import { PostType } from "../../data/post.types";
 
@@ -8,11 +9,14 @@ function Post({ title, author, date, description, slug, image }: PostType) {
       <div className="flex w-full gap-5">
         <div className="w-[60%] space-y-2">
           <div className="flex items-center gap-x-3">
-            <img
-              src={author.image}
-              className="w-7 h-7 rounded-full object-cover object-top"
-              alt=""
-            />
+            <div className="relative w-7 h-7 rounded-full overflow-hidden">
+              <Image
+                src={author.image}
+                fill
+                className="object-cover object-top"
+                alt="author image"
+              />
+            </div>
             <span className="capitalize font-medium text-sm">
               {author.name} <span className="text-gray-500">in</span> Towards
               Data Science
@@ -31,14 +35,8 @@ function Post({ title, author, date, description, slug, image }: PostType) {
             <BookmarkIcon className="icon" />
           </div>
         </div>
-        <div className="flex-1">
-          <div className="h-40 rounded-lg overflow-hidden">
-            <img
-              src={image}
-              className="h-full w-full hover:scale-110 transition-all "
-              alt=""
-            />
-          </div>
+        <div className="flex-1 relative rounded overflow-hidden">
+          <Image src={image} alt="post image" fill />
         </div>
       </div>
     </Link>
