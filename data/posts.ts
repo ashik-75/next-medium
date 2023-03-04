@@ -34,7 +34,7 @@ const posts: PostType[] = [
   },
   {
     _id: 3,
-    title: "Belarus may join russia to attack ukaine",
+    title: "BMW 3 Reavealed already",
     date: new Date().toDateString(),
     description:
       "This war is prolong to 2 years now, it is happening for power crisis.",
