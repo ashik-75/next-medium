@@ -24,8 +24,8 @@ function Header() {
   }, []);
   return (
     <header
-      className={`border-b-[1px] border-gray-400 sticky top-0 left-0 ${
-        show ? "bg-white" : "bg-yellow-500"
+      className={`border-b-[1px]  sticky z-[999] top-0 left-0 ${
+        show ? "bg-white border-gray-200" : "bg-yellow-500 border-gray-400"
       }`}
     >
       <div className="px-10 md:px-0 py-5 flex items-center justify-between max-w-7xl mx-auto">
